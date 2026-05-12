@@ -82,17 +82,23 @@ const formContato = document.getElementById('form-contato');
 if (formContato) {
   formContato.addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    const nome = this.querySelector('input[type="text"]')?.value;
-    const email = this.querySelector('input[type="email"]')?.value;
-    const mensagem = this.querySelector('textarea')?.value;
+    const nome = this.querySelector('input[type="text"]')?.value.trim();
+    const email = this.querySelector('input[type="email"]')?.value.trim();
+    const telefone = this.querySelector('input[type="tel"]')?.value.trim();
+    const mensagem = this.querySelector('textarea')?.value.trim();
     
     if (!nome || !email || !mensagem) {
       alert('⚠️ Por favor, preencha todos os campos obrigatórios.');
       return;
     }
-    
-    alert(`✅ Mensagem enviada com sucesso, ${nome}!\n\nEm breve entrarei em contato.`);
+    const toEmail = 'jesse@studiotattoo.com';
+    const subject = encodeURIComponent(`Contato via site - ${nome}`);
+    const body = encodeURIComponent(
+      `Nome: ${nome}\nEmail: ${email}\nWhatsApp: ${telefone || 'Não informado'}\n\nMensagem:\n${mensagem}`
+    );
+    const mailtoLink = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
     this.reset();
   });
 }

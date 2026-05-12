@@ -7,7 +7,7 @@
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #050505;
-  color: #f5f5f5;
+  color: var(--text-primary);
   line-height: 1.5;
 }
 
@@ -30,6 +30,7 @@ body {
   background: rgba(5, 5, 5, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #222;
+  transition: background 0.6s ease, border-color 0.6s ease;
 }
 
 .logo {
@@ -40,13 +41,13 @@ body {
 }
 
 .logo span {
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .nav a {
   margin-left: 24px;
   text-decoration: none;
-  color: #f5f5f5;
+  color: var(--text-primary);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -54,7 +55,7 @@ body {
 }
 
 .nav a:hover {
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .mobile-menu-btn {
@@ -74,8 +75,12 @@ body {
   justify-content: center;
   position: relative;
   background: linear-gradient(135deg, #0a0a0a 0%, #050505 100%);
-  position: relative;
   overflow: hidden;
+  transition: background 0.6s ease;
+}
+
+[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #e8e8e8 0%, #d5d5d5 100%);
 }
 
 .hero-overlay {
@@ -84,7 +89,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 70% 30%, rgba(230, 57, 70, 0.1), transparent);
+  background: radial-gradient(circle at 70% 30%, var(--accent-bg), transparent);
+  transition: background 0.6s ease;
 }
 
 .hero-content {
@@ -95,31 +101,41 @@ body {
   z-index: 1;
 }
 
+[data-theme="light"] .hero-content {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .hero-tag {
   display: inline-block;
-  background: rgba(230, 57, 70, 0.2);
-  color: #e63946;
+  background: var(--accent-bg);
+  color: var(--accent-color);
   padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  transition: all 0.6s ease;
+}
+
+[data-theme="light"] .hero-tag {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: var(--text-primary);
 }
 
 .highlight {
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .hero p {
   font-size: 1.1rem;
-  color: #ccc;
+  color: var(--text-secondary);
   margin-bottom: 32px;
 }
 
@@ -145,30 +161,30 @@ body {
 }
 
 .btn-primary {
-  background: #e63946;
-  color: #f5f5f5;
+  background: var(--accent-color);
+  color: white;
 }
 
 .btn-primary:hover {
-  background: #ff4b5a;
+  background: var(--accent-light);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #f5f5f5;
-  border: 2px solid #e63946;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
 .btn-secondary:hover {
-  background: rgba(230, 57, 70, 0.1);
+  background: var(--accent-bg);
   transform: translateY(-2px);
 }
 
 .btn-outline {
   background: transparent;
-  color: #f5f5f5;
-  border: 1px solid #e63946;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   padding: 10px 24px;
   border-radius: 999px;
   text-decoration: none;
@@ -176,7 +192,7 @@ body {
 }
 
 .btn-outline:hover {
-  background: #e63946;
+  background: var(--accent-color);
   color: white;
 }
 
@@ -187,7 +203,7 @@ body {
 
 .section-tag {
   display: inline-block;
-  color: #e63946;
+  color: var(--accent-color);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -202,10 +218,11 @@ body {
 .section-header h2 {
   font-size: 2.5rem;
   margin-bottom: 16px;
+  color: var(--text-primary);
 }
 
 .section-header p {
-  color: #aaa;
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -250,10 +267,11 @@ body {
 .sobre-texto h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 .sobre-texto p {
-  color: #ccc;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -266,12 +284,13 @@ body {
 }
 
 .estilo-tag {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--accent-bg);
   padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.85rem;
-  color: #e63946;
-  border: 1px solid rgba(230, 57, 70, 0.3);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  opacity: 0.9;
 }
 
 /* Trabalhos Section */
@@ -283,17 +302,17 @@ body {
 }
 
 .card {
-  background: #111;
+  background: var(--bg-card);
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #222;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  border-color: #e63946;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: var(--border);
 }
 
 .card-image {
@@ -306,11 +325,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .card:hover .card-image img {
-  transform: scale(1.05);
+  transform: scale(1.12);
 }
 
 .card-overlay {
@@ -319,7 +338,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(230, 57, 70, 0.8);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,7 +347,7 @@ body {
 }
 
 .card:hover .card-overlay {
-  opacity: 1;
+  opacity: 0;
 }
 
 .card-overlay span {
@@ -336,6 +355,7 @@ body {
   font-weight: bold;
   transform: translateY(20px);
   transition: transform 0.3s ease;
+  display: none;
 }
 
 .card:hover .card-overlay span {
@@ -349,10 +369,11 @@ body {
 .card-content h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
+  color: var(--text-primary);
 }
 
 .card-content p {
-  color: #aaa;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 12px;
 }
@@ -361,7 +382,7 @@ body {
   display: flex;
   gap: 16px;
   font-size: 0.8rem;
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .ver-mais {
@@ -371,7 +392,7 @@ body {
 
 /* Diferenciais Section */
 .diferenciais {
-  background: linear-gradient(135deg, #0a0a0a 0%, #050505 100%);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   padding: 80px 0;
 }
 
@@ -390,6 +411,10 @@ body {
   transition: transform 0.3s ease;
 }
 
+[data-theme="light"] .diferencial {
+  background: rgba(211, 47, 47, 0.03);
+}
+
 .diferencial:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.05);
@@ -403,10 +428,11 @@ body {
 .diferencial h3 {
   font-size: 1.2rem;
   margin-bottom: 12px;
+  color: var(--text-primary);
 }
 
 .diferencial p {
-  color: #aaa;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -422,10 +448,11 @@ body {
 .contato-info h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 .contato-info > p {
-  color: #aaa;
+  color: var(--text-secondary);
   margin-bottom: 30px;
 }
 
@@ -451,20 +478,20 @@ body {
 
 .contato-lista a,
 .contato-lista span {
-  color: #aaa;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contato-lista a:hover {
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .contato-form {
-  background: #111;
+  background: var(--bg-card);
   padding: 30px;
   border-radius: 16px;
-  border: 1px solid #222;
+  border: 1px solid var(--border);
 }
 
 .contato-form form {
@@ -487,7 +514,7 @@ body {
 .contato-form input:focus,
 .contato-form textarea:focus {
   outline: none;
-  border-color: #e63946;
+  border-color: var(--accent-color);
 }
 
 .contato-form textarea {
@@ -513,7 +540,7 @@ body {
 }
 
 .footer-logo p {
-  color: #777;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
@@ -521,12 +548,13 @@ body {
 .footer-social h4 {
   margin-bottom: 16px;
   font-size: 1rem;
+  color: var(--text-primary);
 }
 
 .footer-links a,
 .footer-social a {
   display: block;
-  color: #777;
+  color: var(--text-muted);
   text-decoration: none;
   margin-bottom: 10px;
   font-size: 0.85rem;
@@ -535,14 +563,14 @@ body {
 
 .footer-links a:hover,
 .footer-social a:hover {
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #222;
-  color: #777;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
   font-size: 0.8rem;
 }
 
@@ -618,7 +646,7 @@ body {
 .preco {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #e63946;
+  color: var(--accent-color);
   display: block;
 }
 
@@ -630,11 +658,11 @@ body {
 .btn-comprar {
   width: 100%;
   margin-top: 12px;
-  background: #e63946;
+  background: var(--accent-color);
 }
 
 .btn-comprar:hover {
-  background: #ff4b5a;
+  background: var(--accent-light);
 }
 
 /* Ajuste para as imagens dos produtos */
@@ -673,18 +701,18 @@ body {
 
 .contato-lista a,
 .contato-lista span {
-  color: #aaa;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contato-lista a:hover {
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .contato-detalhe {
   font-size: 0.75rem;
-  color: #e63946;
+  color: var(--accent-color);
   display: block;
   margin-top: 4px;
 }
@@ -701,7 +729,7 @@ body {
 .redes-sociais h3 {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #e63946;
+  color: var(--accent-color);
 }
 
 .horario-funcionamento ul {
@@ -729,15 +757,16 @@ body {
 .social-link {
   display: inline-block;
   padding: 8px 16px;
-  background: rgba(230, 57, 70, 0.1);
+  background: var(--accent-bg);
   border-radius: 8px;
   text-decoration: none;
-  color: #f5f5f5;
+  color: var(--accent-color);
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: #e63946;
+  background: var(--accent-color);
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -755,7 +784,7 @@ body {
 .mapa {
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #222;
+  border: 1px solid var(--border);
 }
 
 .mapa-nota {
@@ -855,21 +884,27 @@ body {
   --card-hover: #1a1a1a;
   --input-bg: #1a1a1a;
   --input-border: #333;
+  --accent-color: var(--accent-color);
+  --accent-light: var(--accent-light);
+  --accent-bg: var(--accent-bg);
 }
 
 [data-theme="light"] {
   /* Tema Claro */
-  --bg-primary: #f5f5f5;
+  --bg-primary: #f9f9f9;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
-  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-header: rgba(255, 255, 255, 0.98);
   --text-primary: #1a1a1a;
-  --text-secondary: #444;
-  --text-muted: #666;
-  --border: #e0e0e0;
-  --card-hover: #f0f0f0;
+  --text-secondary: #333;
+  --text-muted: #555;
+  --border: #d0d0d0;
+  --card-hover: #f5f5f5;
   --input-bg: #ffffff;
-  --input-border: #ddd;
+  --input-border: #bbb;
+  --accent-color: #d32f2f;
+  --accent-light: var(--accent-color);
+  --accent-bg: rgba(211, 47, 47, 0.08);
 }
 
 /* Aplicando as variáveis */
@@ -943,11 +978,13 @@ body {
   justify-content: center;
   transition: all 0.3s ease;
   font-size: 1.2rem;
+  color: var(--text-primary);
 }
 
 .theme-toggle:hover {
   transform: scale(1.1);
-  border-color: #e63946;
+  border-color: var(--accent-color);
+  background: var(--accent-bg);
 }
 
 .theme-icon {
