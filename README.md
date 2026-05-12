@@ -19,9 +19,6 @@ No seu link do GitHub Pages, eu percebi que você estruturou bem a semântica. P
 2.  **O CSS** cria a atmosfera de um estúdio de tatuagem (experiência do usuário - UX).
 3.  **O JavaScript** facilita o contato do cliente com o artista (conversão/funcionalidade).
 
-## 📱 Demonstração do Projeto
-
-![Preview do Studio James Tattoo](./assets/projeto-tattoo.gif)
 
 ---
 Desenvolvido com ❤️ por Adriano Aguiar feat FocoEmPautaDev
