@@ -9,14 +9,19 @@ const CONFIG = {
 // cat: "pb" = preto e cinza | "cor" = colorida
 // destaque: true = aparece na página inicial
 const TRABALHOS = [
+  { img: "img/instagram/cobertura-costas-lobo-leao.jpg", titulo: "Cobertura nas costas: lobo e leão", cat: "pb", destaque: true },
+  { img: "img/instagram/coruja.jpg", titulo: "Coruja: entre a razão e o instinto", cat: "pb", destaque: true },
+  { img: "img/instagram/anjo-da-guarda.jpg", titulo: "Anjo da guarda", cat: "pb" },
+  { img: "img/instagram/anjos-antebraco.jpg", titulo: "Anjos no antebraço", cat: "pb" },
+  { img: "img/instagram/reforma-capacete-espartano.jpg", titulo: "Reforma: capacete espartano", cat: "pb" },
   { img: "img/WhatsApp Image 2026-04-19 at 20.57.22 (4).jpeg", titulo: "Costas fechadas: Cristo e leão", cat: "pb", destaque: true },
   { img: "img/WhatsApp Image 2026-04-29 at 19.22.37 (1).jpeg", titulo: "Catrina colorida", cat: "cor", destaque: true },
   { img: "img/WhatsApp Image 2026-04-29 at 19.22.40.jpeg", titulo: "Homenagem a Ayrton Senna", cat: "pb", destaque: true },
   { img: "img/WhatsApp Image 2026-04-29 at 19.22.37.jpeg", titulo: "Homem-Aranha, Venom e galáxia", cat: "cor", destaque: true },
   { img: "img/WhatsApp Image 2026-04-29 at 19.22.41 (2).jpeg", titulo: "Leão e medalha de São Bento", cat: "pb", destaque: true },
   { img: "img/new/WhatsApp Image 2026-04-19 at 21.08.53 (1).jpeg", titulo: "Pôr do sol", cat: "cor", destaque: true },
-  { img: "img/WhatsApp Image 2026-04-29 at 19.22.40 (1).jpeg", titulo: "Relógio e bússola", cat: "pb", destaque: true },
-  { img: "img/WhatsApp Image 2026-04-29 at 19.22.38.jpeg", titulo: "Leão coroado", cat: "pb", destaque: true },
+  { img: "img/WhatsApp Image 2026-04-29 at 19.22.40 (1).jpeg", titulo: "Relógio e bússola", cat: "pb" },
+  { img: "img/WhatsApp Image 2026-04-29 at 19.22.38.jpeg", titulo: "Leão coroado", cat: "pb" },
   { img: "img/WhatsApp Image 2026-04-29 at 19.22.41.jpeg", titulo: "Águia e relógio", cat: "pb" },
   { img: "img/WhatsApp Image 2026-04-19 at 20.57.22 (3).jpeg", titulo: "Retrato feminino", cat: "pb" },
   { img: "img/WhatsApp Image 2026-04-29 at 19.22.39 (2).jpeg", titulo: "Leão e engrenagens", cat: "pb" },
@@ -41,10 +46,12 @@ const TRABALHOS = [
 ];
 
 // ==================== ANTES E DEPOIS (COBERTURAS) ====================
-// Quando tiver fotos de coberturas, adicione aqui. Enquanto a lista
-// estiver vazia, o site mostra um convite para enviar foto.
-// Exemplo: { antes: "img/antes-depois/antes-1.jpg", depois: "img/antes-depois/depois-1.jpg" }
-const ANTES_DEPOIS = [];
+// Pares de fotos na pasta img/antes-depois. Para adicionar um novo,
+// copie uma linha e troque os nomes dos arquivos e o título.
+const ANTES_DEPOIS = [
+  { antes: "img/antes-depois/antes-1.jpg", depois: "img/antes-depois/depois-1.jpg", titulo: "Cobertura: leão antigo virou guerreiro espartano" },
+  { antes: "img/antes-depois/antes-2.jpg", depois: "img/antes-depois/depois-2.jpg", titulo: "Reforma: capacete espartano recuperado" },
+];
 
 const CATEGORIAS = { pb: "Preto e cinza", cor: "Colorida" };
 
@@ -188,20 +195,14 @@ document.addEventListener("keydown", e => {
 // ==================== ANTES E DEPOIS ====================
 const adBox = document.getElementById("antes-depois");
 if (adBox && ANTES_DEPOIS.length) {
-  const par = ANTES_DEPOIS[0];
-  adBox.innerHTML = `
-    <div class="antes-depois">
-      <img src="${par.depois}" alt="Depois da cobertura">
-      <img class="ad-antes" src="${par.antes}" alt="Antes da cobertura">
-      <span class="ad-label ad-label--antes">Antes</span>
-      <span class="ad-label ad-label--depois">Depois</span>
-      <div class="ad-linha"></div>
-      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
-    </div>`;
-  const slider = adBox.querySelector(".antes-depois");
-  slider.querySelector("input").addEventListener("input", e =>
-    slider.style.setProperty("--pos", e.target.value + "%")
-  );
+  adBox.innerHTML = ANTES_DEPOIS.map(par => `
+    <figure class="par">
+      <div class="par__fotos">
+        <div class="par__foto"><img src="${par.antes}" alt="Antes: ${par.titulo}" loading="lazy"><span class="ad-label">Antes</span></div>
+        <div class="par__foto"><img src="${par.depois}" alt="Depois: ${par.titulo}" loading="lazy"><span class="ad-label ad-label--depois">Depois</span></div>
+      </div>
+      <figcaption>${par.titulo}</figcaption>
+    </figure>`).join("");
 }
 
 // ==================== FORMULÁRIO → WHATSAPP ====================
