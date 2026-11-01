@@ -2,7 +2,7 @@
 // Troque aqui e o site inteiro é atualizado.
 const CONFIG = {
   whatsapp: "5561998181020",          // só números, com 55 + DDD
-  instagram: "james.tattooart",            // sem @
+  instagram: "james.tattooart_",            // sem @
 };
 
 // ==================== PORTFÓLIO ====================
