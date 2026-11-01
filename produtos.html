@@ -1,204 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produtos | James Tatto Art</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Loja | Studio James</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">James <span>Tatto art</span></div>
-  <nav class="nav">
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="trabalhos.html">Trabalhos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-  <button class="mobile-menu-btn">☰</button>
+  <div class="container header__inner">
+    <a href="index.html" class="logo">Studio <span>James</span></a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#cobertura">Cobertura</a>
+      <a href="trabalhos.html">Trabalhos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="produtos.html" class="active">Loja</a>
+      <a href="contato.html" class="btn btn-primary">Orçamento</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">☀️</button>
+    <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
 </header>
 
-<section class="section">
+<main class="section">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Produtos exclusivos</span>
-      <h1>Loja <span class="highlight">Oficial</span></h1>
-      <p>Adquira produtos exclusivos do estúdio e mostre seu estilo.</p>
+      <h1>Loja <span class="highlight">oficial</span></h1>
+      <p>Produtos exclusivos do estúdio. Para comprar, é só chamar no WhatsApp.</p>
     </div>
 
-    <div class="grid">
-      <!-- Produto 1 - Camiseta -->
-      <div class="card produto-card">
-        <div class="card-image">
-          <img src="img/produtos/camiseta1.jpg" alt="Camiseta Tattoo">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
+    <div class="produtos-grid">
+      <article class="produto reveal">
+        <div class="produto__img">👕</div>
+        <div class="produto__info">
+          <h3>Camiseta Studio James</h3>
+          <p>100% algodão, estampa exclusiva do estúdio. Tamanhos P ao GG, preta ou branca.</p>
+          <span class="preco">R$ 89,90</span>
+          <a href="#" data-whats class="btn btn-primary btn-full">Comprar</a>
         </div>
-        <div class="card-content">
-          <h3>Camiseta Tattoo</h3>
-          <p>Camiseta 100% algodão com estampa exclusiva do estúdio. Design autoral e acabamento premium.</p>
-          <div class="produto-preco">
-            <span class="preco">R$ 89,90</span>
-            <span class="parcelamento">ou 3x de R$ 29,97</span>
-          </div>
-          <div class="card-meta">
-            <span>📏 Tamanhos: P ao GG</span>
-            <span>🎨 Cores: Preto/Branco</span>
-          </div>
-          <button class="btn btn-primary btn-comprar">Comprar →</button>
-        </div>
-      </div>
-
-      <!-- Produto 2 - Print A4 -->
-      <div class="card produto-card">
-        <div class="card-image">
-          <img src="img/produtos/print1.jpg" alt="Print A4">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
+      </article>
+      <article class="produto reveal">
+        <div class="produto__img">🖼️</div>
+        <div class="produto__info">
           <h3>Print A4</h3>
-          <p>Impressão de alta qualidade em papel premium. Arte autoral pronta para emoldurar.</p>
-          <div class="produto-preco">
-            <span class="preco">R$ 39,90</span>
-            <span class="parcelamento">ou 2x de R$ 19,95</span>
-          </div>
-          <div class="card-meta">
-            <span>📐 Tamanho: A4 (21x29,7cm)</span>
-            <span>🖼️ Papel: Fosco 180g</span>
-          </div>
-          <button class="btn btn-primary btn-comprar">Comprar →</button>
+          <p>Arte autoral em papel fosco 180g (21×29,7 cm), pronta para emoldurar.</p>
+          <span class="preco">R$ 39,90</span>
+          <a href="#" data-whats class="btn btn-primary btn-full">Comprar</a>
         </div>
-      </div>
-
-      <!-- Produto 3 - Boné -->
-      <div class="card produto-card">
-        <div class="card-image">
-          <img src="img/produtos/bone.jpg" alt="Boné Tattoo">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
+      </article>
+      <article class="produto reveal">
+        <div class="produto__img">🧢</div>
+        <div class="produto__info">
           <h3>Boné Trucker</h3>
-          <p>Boné estilo trucker com bordado exclusivo. Ajuste regulável e alta qualidade.</p>
-          <div class="produto-preco">
-            <span class="preco">R$ 69,90</span>
-            <span class="parcelamento">ou 3x de R$ 23,30</span>
-          </div>
-          <div class="card-meta">
-            <span>🧢 Ajuste: Universal</span>
-            <span>🎨 Cor: Preto</span>
-          </div>
-          <button class="btn btn-primary btn-comprar">Comprar →</button>
+          <p>Bordado exclusivo, ajuste regulável, cor preta.</p>
+          <span class="preco">R$ 69,90</span>
+          <a href="#" data-whats class="btn btn-primary btn-full">Comprar</a>
         </div>
-      </div>
-
-      <!-- Produto 4 - Caneca -->
-      <div class="card produto-card">
-        <div class="card-image">
-          <img src="img/produtos/caneca.jpg" alt="Caneca Tattoo">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
+      </article>
+      <article class="produto reveal">
+        <div class="produto__img">☕</div>
+        <div class="produto__info">
+          <h3>Caneca Studio James</h3>
+          <p>Porcelana, 300 ml, pode ir ao micro-ondas.</p>
+          <span class="preco">R$ 49,90</span>
+          <a href="#" data-whats class="btn btn-primary btn-full">Comprar</a>
         </div>
-        <div class="card-content">
-          <h3>Caneca Tattoo</h3>
-          <p>Caneca de porcelana com estampa térmica. Ideal para o café do dia a dia.</p>
-          <div class="produto-preco">
-            <span class="preco">R$ 49,90</span>
-            <span class="parcelamento">ou 2x de R$ 24,95</span>
-          </div>
-          <div class="card-meta">
-            <span>☕ Capacidade: 300ml</span>
-            <span>🔥 Resistente ao micro-ondas</span>
-          </div>
-          <button class="btn btn-primary btn-comprar">Comprar →</button>
-        </div>
-      </div>
-
-      <!-- Produto 5 - Adesivo -->
-      <div class="card produto-card">
-        <div class="card-image">
-          <img src="img/produtos/adesivo.jpg" alt="Kit Adesivos">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
+      </article>
+      <article class="produto reveal">
+        <div class="produto__img">✨</div>
+        <div class="produto__info">
           <h3>Kit Adesivos</h3>
-          <p>Kit com 10 adesivos exclusivos de tamanhos variados. Vinil de alta durabilidade.</p>
-          <div class="produto-preco">
-            <span class="preco">R$ 19,90</span>
-            <span class="parcelamento">à vista</span>
-          </div>
-          <div class="card-meta">
-            <span>📦 10 unidades</span>
-            <span>💧 Resistentes à água</span>
-          </div>
-          <button class="btn btn-primary btn-comprar">Comprar →</button>
+          <p>10 adesivos exclusivos em vinil resistente à água.</p>
+          <span class="preco">R$ 19,90</span>
+          <a href="#" data-whats class="btn btn-primary btn-full">Comprar</a>
         </div>
-      </div>
-
-      <!-- Produto 6 - Agenda -->
-      <div class="card produto-card">
-        <div class="card-image">
-          <img src="img/produtos/agenda.jpg" alt="Agenda">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
+      </article>
+      <article class="produto reveal">
+        <div class="produto__img">📓</div>
+        <div class="produto__info">
+          <h3>Agenda</h3>
+          <p>Agenda anual com artes do estúdio, capa dura, 15×21 cm.</p>
+          <span class="preco">R$ 59,90</span>
+          <a href="#" data-whats class="btn btn-primary btn-full">Comprar</a>
         </div>
-        <div class="card-content">
-          <h3>Agenda 2025</h3>
-          <p>Agenda anual com artes exclusivas do estúdio. Capa dura e papel reciclado.</p>
-          <div class="produto-preco">
-            <span class="preco">R$ 59,90</span>
-            <span class="parcelamento">ou 3x de R$ 19,97</span>
-          </div>
-          <div class="card-meta">
-            <span>📅 365 páginas</span>
-            <span>📏 Tamanho: 15x21cm</span>
-          </div>
-          <button class="btn btn-primary btn-comprar">Comprar →</button>
-        </div>
-      </div>
+      </article>
     </div>
   </div>
-</section>
+</main>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo">James <span>Tatto art</span></div>
-        <p>Tatuagens que contam histórias e marcam momentos especiais.</p>
+      <div>
+        <a href="index.html" class="logo">Studio <span>James</span></a>
+        <p>Tatuagem colorida e preto e cinza. Especialista em cobertura e reforma de tatuagens antigas.</p>
       </div>
-      <div class="footer-links">
+      <div>
         <h4>Navegação</h4>
         <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
         <a href="trabalhos.html">Trabalhos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="produtos.html">Loja</a>
         <a href="contato.html">Contato</a>
       </div>
-      <div class="footer-social">
+      <div>
         <h4>Redes sociais</h4>
-        <div class="social-icons">
-          <a href="#">📷 Instagram</a>
-          <a href="#">💬 WhatsApp</a>
-        </div>
+        <a href="#" data-insta>📷 Instagram</a>
+        <a href="#" data-whats>💬 WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> James Tatto art — Todos os direitos reservados.</p>
+      <p>© <span id="year"></span> Studio James — Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>
+
+<a href="#" data-whats class="whats-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1-1.6-1.5-3.5-1.5-5.4 0-5.8 4.7-10.5 10.6-10.5s10.6 4.7 10.6 10.5S21.9 26.1 16 26.1zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>
+</a>
 
 <script src="script.js"></script>
 </body>

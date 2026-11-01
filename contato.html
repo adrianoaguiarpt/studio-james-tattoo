@@ -1,156 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato | James Tatto Art</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Contato e orçamento | Studio James</title>
+  <meta name="description" content="Peça seu orçamento no Studio James: cobertura de tatuagem, reforma, preto e cinza e colorida.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">James <span>Tatto art</span></div>
-  <nav class="nav">
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="trabalhos.html">Trabalhos</a>
-    <a href="produtos.html">Produtos</a>
-  </nav>
-  <button class="mobile-menu-btn">☰</button>
+  <div class="container header__inner">
+    <a href="index.html" class="logo">Studio <span>James</span></a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#cobertura">Cobertura</a>
+      <a href="trabalhos.html">Trabalhos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="produtos.html">Loja</a>
+      <a href="contato.html" class="btn btn-primary">Orçamento</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">☀️</button>
+    <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
 </header>
 
-<section class="section">
+<main class="section">
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Vamos conversar</span>
-      <h1>Entre em <span class="highlight">Contato</span></h1>
-      <p>Tire suas dúvidas, agende sua sessão ou peça um orçamento sem compromisso.</p>
+      <h1>Peça seu <span class="highlight">orçamento</span></h1>
+      <p>Preencha o formulário e a mensagem abre direto no WhatsApp. Para cobertura ou reforma, envie também uma foto da tatuagem atual.</p>
     </div>
 
-    <div class="contato-grid">
-      <!-- Informações de contato -->
-      <div class="contato-info">
-        <h2>Informações de <span class="highlight">contato</span></h2>
-        <p>Estou disponível para atender você de segunda a sábado. Entre em contato pelo canal mais conveniente para você.</p>
-
+    <div class="split split--top">
+      <div class="reveal">
+        <h2>Informações</h2>
         <ul class="contato-lista">
           <li>
-            <span class="contato-icone">📷</span>
-            <div>
-              <strong>Instagram</strong>
-              <a href="https://instagram.com/@james_tatto" target="_blank">@james_tatto</a>
-            </div>
+            <span class="contato-icone">💬</span>
+            <div><strong>WhatsApp</strong><a href="#" data-whats>(61) 99818-1020</a></div>
           </li>
           <li>
-            <span class="contato-icone">💬</span>
-            <div>
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
-              <span class="contato-detalhe">Clique para falar agora</span>
-            </div>
+            <span class="contato-icone">📷</span>
+            <div><strong>Instagram</strong><a href="#" data-insta="texto">@james_tatto</a></div>
           </li>
           <li>
             <span class="contato-icone">📧</span>
-            <div>
-              <strong>E-mail</strong>
-              <a href="mailto:james@tattoart.com">james@tattoart.com</a>
-            </div>
+            <div><strong>E-mail</strong><a href="mailto:james@tattoart.com">james@tattoart.com</a></div>
           </li>
           <li>
             <span class="contato-icone">📍</span>
-            <div>
-              <strong>Endereço</strong>
-              <span>Rua das Tattoos, 123 - Jardins</span>
-              <span>São Paulo - SP, 01234-567</span>
-            </div>
+            <div><strong>Endereço</strong><span>Brasília – DF</span></div>
           </li>
         </ul>
 
-        <div class="horario-funcionamento">
-          <h3>📅 Horário de funcionamento</h3>
+        <div class="horario">
+          <h3>Horário (com agendamento)</h3>
           <ul>
-            <li><span>Segunda a Sexta:</span> 10h às 20h</li>
-            <li><span>Sábado:</span> 10h às 18h</li>
-            <li><span>Domingo:</span> Fechado</li>
+            <li><span>Segunda a sexta</span> 10h às 20h</li>
+            <li><span>Sábado</span> 10h às 18h</li>
+            <li><span>Domingo</span> Fechado</li>
           </ul>
-        </div>
-
-        <div class="redes-sociais">
-          <h3>Redes sociais</h3>
-          <div class="social-links">
-            <a href="#" class="social-link">📷 Instagram</a>
-            <a href="#" class="social-link">💬 WhatsApp</a>
-            <a href="#" class="social-link">📘 Facebook</a>
-            <a href="#" class="social-link">🎵 TikTok</a>
-          </div>
         </div>
       </div>
 
-      <!-- Formulário de contato -->
-      <div class="contato-form">
-        <h3>Envie uma <span class="highlight">mensagem</span></h3>
-        <form action="#" method="POST" id="form-contato">
-          <input type="text" placeholder="Seu nome completo" required>
-          <input type="email" placeholder="Seu melhor e-mail" required>
-          <input type="tel" placeholder="WhatsApp para contato">
-          <select>
-            <option value="">Assunto da mensagem</option>
-            <option value="orcamento">Orçamento de tatuagem</option>
-            <option value="agendamento">Agendamento</option>
-            <option value="produtos">Informações sobre produtos</option>
-            <option value="outros">Outros assuntos</option>
-          </select>
-          <textarea rows="5" placeholder="Descreva sua ideia, dúvida ou solicitação..."></textarea>
-          <button type="submit" class="btn btn-primary">Enviar mensagem →</button>
+      <div class="contato-form reveal">
+        <form id="form-contato">
+          <label>Seu nome
+            <input name="nome" required autocomplete="name">
+          </label>
+          <label>O que você quer fazer?
+            <select name="servico">
+              <option>Cobertura de tatuagem antiga</option>
+              <option>Reforma de tatuagem velha</option>
+              <option>Tatuagem nova em preto e cinza</option>
+              <option>Tatuagem nova colorida</option>
+              <option>Outro assunto</option>
+            </select>
+          </label>
+          <label>Local do corpo e tamanho aproximado
+            <input name="local" placeholder="Ex.: antebraço, 15 cm">
+          </label>
+          <label>Conte sua ideia
+            <textarea name="ideia" rows="5" required placeholder="Descreva a tatuagem que quer, ou o que gostaria de mudar na antiga..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-full">Enviar pelo WhatsApp</button>
+          <p class="form-nota">Depois de enviar, anexe a foto da tatuagem na conversa do WhatsApp.</p>
         </form>
       </div>
     </div>
 
-    <!-- Mapa de localização -->
-    <div class="mapa-container">
-      <h3>📍 Localização do estúdio</h3>
-      <div class="mapa">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.091!2d-46.656!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr" 
-          width="100%" 
-          height="400" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
-      <p class="mapa-nota">📍 Estacionamento fácil nas proximidades | Metrô a 5 min de distância</p>
+    <div class="mapa reveal">
+      <iframe
+        title="Localização do estúdio"
+        src="https://maps.google.com/maps?q=Bras%C3%ADlia%20DF&z=12&output=embed"
+        loading="lazy" allowfullscreen></iframe>
     </div>
   </div>
-</section>
+</main>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo">James <span>Tatto art</span></div>
-        <p>Tatuagens que contam histórias e marcam momentos especiais.</p>
+      <div>
+        <a href="index.html" class="logo">Studio <span>James</span></a>
+        <p>Tatuagem colorida e preto e cinza. Especialista em cobertura e reforma de tatuagens antigas.</p>
       </div>
-      <div class="footer-links">
+      <div>
         <h4>Navegação</h4>
         <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
         <a href="trabalhos.html">Trabalhos</a>
-        <a href="produtos.html">Produtos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="produtos.html">Loja</a>
+        <a href="contato.html">Contato</a>
       </div>
-      <div class="footer-social">
+      <div>
         <h4>Redes sociais</h4>
-        <div class="social-icons">
-          <a href="#">📷 Instagram</a>
-          <a href="#">💬 WhatsApp</a>
-        </div>
+        <a href="#" data-insta>📷 Instagram</a>
+        <a href="#" data-whats>💬 WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> James Tatto art — Todos os direitos reservados.</p>
+      <p>© <span id="year"></span> Studio James — Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>
