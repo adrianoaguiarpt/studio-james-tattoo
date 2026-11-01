@@ -1,0 +1,3 @@
+Coloque aqui as fotos de coberturas e reformas (antes e depois).
+Nomeie em pares: antes-1.jpg / depois-1.jpg, antes-2.jpg / depois-2.jpg ...
+Depois é só adicioná-las à lista ANTES_DEPOIS no script.js.

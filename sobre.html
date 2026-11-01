@@ -1,84 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre | James Tatto Art</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sobre | Studio James</title>
+  <meta name="description" content="Conheça o Jesse, tatuador especialista em cobertura e reforma de tatuagens, realismo preto e cinza e tatuagem colorida.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">James <span>Tatto art</span></div>
-  <nav class="nav">
-    <a href="index.html">Início</a>
-    <a href="trabalhos.html">Trabalhos</a>
-    <a href="produtos.html">Produtos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-  <button class="mobile-menu-btn">☰</button>
+  <div class="container header__inner">
+    <a href="index.html" class="logo">Studio <span>James</span></a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#cobertura">Cobertura</a>
+      <a href="trabalhos.html">Trabalhos</a>
+      <a href="sobre.html" class="active">Sobre</a>
+      <a href="produtos.html">Loja</a>
+      <a href="contato.html" class="btn btn-primary">Orçamento</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">☀️</button>
+    <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
 </header>
 
-<section class="section">
-  <div class="container">
-    <div class="sobre-grid">
-      <div class="sobre-imagem">
-        <img src="img/new/WhatsApp Image 2026-04-19 at 21.11.50.jpeg" alt="James Tatuador">
+<main>
+  <section class="section">
+    <div class="container split">
+      <div class="sobre-imagem reveal">
+        <img src="img/new/WhatsApp Image 2026-04-19 at 21.11.50.jpeg" alt="Jesse, tatuador do Studio James">
         <div class="experiencia-badge">8+ anos de experiência</div>
       </div>
-      <div class="sobre-texto">
+      <div class="reveal">
         <span class="section-tag">Conheça o artista</span>
-        <h1>Sobre o <span class="highlight">James TattoArt</span></h1>
-        <p>
-          Com mais de 8 anos de experiência no universo da tatuagem, James transforma histórias e ideias em arte única sobre a pele. Especialista nos estilos <strong>Cobertura, Realismo Preto e Cinza</strong>, ele une técnica apurada com um olhar artístico singular.
-        </p>
-        <p>
-          James já tatuou clientes de todo o Brasil em seu estúdio <strong>Lendarious</strong> onde preza por um ambiente acolhedor, higienizado e com todo o cuidado que sua arte merece.
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quaerat numquam animi minima enim, quis totam neque vitae! Possimus a dignissimos qui cumque nobis sed in ut, deserunt debitis molestias?
-        </p>
+        <h1>Sobre o <span class="highlight">Jesse</span></h1>
+        <p>Com mais de 8 anos de experiência, Jesse transforma histórias e ideias em arte sobre a pele. Trabalha com <strong>realismo em preto e cinza</strong> e com <strong>tatuagens coloridas</strong>, mas é nos casos difíceis que ele se destaca: <strong>cobrir tatuagens antigas</strong> e <strong>reformar tatuagens velhas</strong>.</p>
+        <p class="citacao">“Quase todo mundo tem uma tatuagem de que se arrepende. O meu trabalho é transformá-la em algo de que você se orgulhe.”</p>
+        <p>Jesse já tatuou clientes de todo o Brasil no estúdio <strong>Lendarious</strong>, num ambiente acolhedor, higienizado e com todo o cuidado que cada projeto merece. Cada cobertura é estudada em detalhe — o desenho, as sombras e as cores — para que a tatuagem antiga desapareça de verdade.</p>
         <div class="estilos">
           <span class="estilo-tag">Cobertura</span>
+          <span class="estilo-tag">Reforma</span>
           <span class="estilo-tag">Realismo</span>
-          <span class="estilo-tag">Cinza</span>
-          <span class="estilo-tag">Preto</span>
+          <span class="estilo-tag">Preto e cinza</span>
+          <span class="estilo-tag">Colorida</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Por que o Studio James</span>
+        <h2>Diferenciais</h2>
+      </div>
+      <div class="diferenciais-grid">
+        <div class="diferencial reveal">
+          <div class="diferencial-icon">🎯</div>
+          <h3>Especialista em cobertura</h3>
+          <p>Experiência com tatuagens escuras, grandes e antigas — os casos que muitos recusam.</p>
+        </div>
+        <div class="diferencial reveal">
+          <div class="diferencial-icon">🎨</div>
+          <h3>Desenho exclusivo</h3>
+          <p>Cada projeto é criado sob medida para a sua ideia e para a região do corpo.</p>
+        </div>
+        <div class="diferencial reveal">
+          <div class="diferencial-icon">🔒</div>
+          <h3>Higiene rigorosa</h3>
+          <p>Material estéril e descartável, aberto na sua frente.</p>
+        </div>
+        <div class="diferencial reveal">
+          <div class="diferencial-icon">💬</div>
+          <h3>Avaliação sincera</h3>
+          <p>Se uma cobertura não for a melhor opção, você fica sabendo antes de começar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <span class="section-tag">No estúdio</span>
+        <h2>Cada traço com <span class="highlight">atenção</span></h2>
+        <p>As sessões são feitas com calma e conforto. Antes de começar, revisamos juntos o desenho e o posicionamento; no fim, você recebe todas as orientações de cicatrização para a tatuagem durar bonita por muitos anos.</p>
+        <a href="contato.html" class="btn btn-primary">Agendar avaliação</a>
+      </div>
+      <div class="sobre-imagem reveal">
+        <img src="img/new/WhatsApp Image 2026-04-19 at 21.11.49.jpeg" alt="Jesse tatuando no estúdio" loading="lazy">
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo">James <span>Tatto art</span></div>
-        <p>Tatuagens que contam histórias e marcam momentos especiais.</p>
+      <div>
+        <a href="index.html" class="logo">Studio <span>James</span></a>
+        <p>Tatuagem colorida e preto e cinza. Especialista em cobertura e reforma de tatuagens antigas.</p>
       </div>
-      <div class="footer-links">
+      <div>
         <h4>Navegação</h4>
         <a href="index.html">Início</a>
         <a href="trabalhos.html">Trabalhos</a>
-        <a href="produtos.html">Produtos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="produtos.html">Loja</a>
         <a href="contato.html">Contato</a>
       </div>
-      <div class="footer-social">
+      <div>
         <h4>Redes sociais</h4>
-        <div class="social-icons">
-          <a href="#">📷 Instagram</a>
-          <a href="#">💬 WhatsApp</a>
-        </div>
+        <a href="#" data-insta>📷 Instagram</a>
+        <a href="#" data-whats>💬 WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> James Tatto art — Todos os direitos reservados.</p>
+      <p>© <span id="year"></span> Studio James — Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>
+
+<a href="#" data-whats class="whats-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1-1.6-1.5-3.5-1.5-5.4 0-5.8 4.7-10.5 10.6-10.5s10.6 4.7 10.6 10.5S21.9 26.1 16 26.1zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>
+</a>
 
 <script src="script.js"></script>
 </body>

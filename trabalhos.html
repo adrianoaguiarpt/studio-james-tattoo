@@ -1,410 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabalhos | James Tatto Art</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Trabalhos | Studio James</title>
+  <meta name="description" content="Portfólio do Studio James: realismo preto e cinza, tatuagens coloridas, coberturas e reformas.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">James <span>Tatto art</span></div>
-  <nav class="nav">
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="produtos.html">Produtos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-  <button class="mobile-menu-btn">☰</button>
+  <div class="container header__inner">
+    <a href="index.html" class="logo">Studio <span>James</span></a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#cobertura">Cobertura</a>
+      <a href="trabalhos.html" class="active">Trabalhos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="produtos.html">Loja</a>
+      <a href="contato.html" class="btn btn-primary">Orçamento</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">☀️</button>
+    <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
 </header>
 
-<section class="section">
+<main class="section">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Portfólio completo</span>
-      <h1>Meus <span class="highlight">Trabalhos</span></h1>
-      <p>Conheça alguns dos meus melhores trabalhos e inspire-se para a sua próxima tattoo.</p>
+      <span class="section-tag">Portfólio</span>
+      <h1>Meus <span class="highlight">trabalhos</span></h1>
+      <p>Realismo em preto e cinza e tatuagens coloridas. Clique numa foto para ampliar e use as setas para navegar.</p>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-19 at 20.57.22.jpeg" alt="Tatuagem Blackwork">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Blackwork</h3>
-          <p>Mandalas e geometria sagrada combinando precisão e impacto visual.</p>
-          <div class="card-meta">
-            <span>📍 Braço</span>
-            <span>⏱️ 4h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-19 at 20.57.22 (1).jpeg" alt="Tatuagem Realismo">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Realismo</h3>
-          <p>Retrato hiper-realista com sombreamento impecável e detalhes impressionantes.</p>
-          <div class="card-meta">
-            <span>📍 Peito</span>
-            <span>⏱️ 6h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-19 at 20.57.22 (2).jpeg" alt="Tatuagem Fineline">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Fineline</h3>
-          <p>Traços finos e delicados com um design único e minimalista.</p>
-          <div class="card-meta">
-            <span>📍 Costela</span>
-            <span>⏱️ 3h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-19 at 20.57.22 (3).jpeg" alt="Tatuagem Old School">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Old School</h3>
-          <p>Estilo clássico com cores vibrantes e traços marcantes.</p>
-          <div class="card-meta">
-            <span>📍 Antebraço</span>
-            <span>⏱️ 3.5h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-19 at 20.57.22 (4).jpeg" alt="Tatuagem Aquarela">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Aquarela</h3>
-          <p>Efeito artístico com cores fluidas e degradês suaves.</p>
-          <div class="card-meta">
-            <span>📍 Perna</span>
-            <span>⏱️ 5h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.37.jpeg" alt="Tatuagem Tribal">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Tribal Moderno</h3>
-          <p>Traços fluidos e simbologia contemporânea.</p>
-          <div class="card-meta">
-            <span>📍 Costas</span>
-            <span>⏱️ 8h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.37 (1).jpeg" alt="Tatuagem Geométrica">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Geométrica</h3>
-          <p>Composições matemáticas com linhas precisas e simetria perfeita.</p>
-          <div class="card-meta">
-            <span>📍 Ombro</span>
-            <span>⏱️ 4.5h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.37 (2).jpeg" alt="Tatuagem Minimalista">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Minimalista</h3>
-          <p>Designs simples e elegantes com significado profundo.</p>
-          <div class="card-meta">
-            <span>📍 Pulso</span>
-            <span>⏱️ 2h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.38.jpeg" alt="Tatuagem Colorida">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Colorida</h3>
-          <p>Arte vibrante com paleta rica e energia contagiante.</p>
-          <div class="card-meta">
-            <span>📍 Panturrilha</span>
-            <span>⏱️ 7h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.39.jpeg" alt="Tatuagem Oriental">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Oriental</h3>
-          <p>Dragões e símbolos ancestrais com traços fluidos e detalhados.</p>
-          <div class="card-meta">
-            <span>📍 Braço</span>
-            <span>⏱️ 10h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.39 (1).jpeg" alt="Tatuagem Retrato">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Retrato</h3>
-          <p>Captura de expressões e emoções com realismo impressionante.</p>
-          <div class="card-meta">
-            <span>📍 Antebraço</span>
-            <span>⏱️ 8h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.39 (2).jpeg" alt="Tatuagem Natureza">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Natureza</h3>
-          <p>Flores, animais e paisagens com cores naturais e formas orgânicas.</p>
-          <div class="card-meta">
-            <span>📍 Coxa</span>
-            <span>⏱️ 6h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.40.jpeg" alt="Tatuagem Abstrata">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Abstrata</h3>
-          <p>Composições artísticas que desafiam convenções e exploram formas.</p>
-          <div class="card-meta">
-            <span>📍 Tornozelo</span>
-            <span>⏱️ 3h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.40 (1).jpeg" alt="Tatuagem Mandala">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Mandala</h3>
-          <p>Símbolos sagrados com simetria perfeita e significado espiritual.</p>
-          <div class="card-meta">
-            <span>📍 Escápula</span>
-            <span>⏱️ 5h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.40 (2).jpeg" alt="Tatuagem Lettering">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Lettering</h3>
-          <p>Frases e palavras com caligrafia artística e significado pessoal.</p>
-          <div class="card-meta">
-            <span>📍 Costelas</span>
-            <span>⏱️ 4h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.41.jpeg" alt="Tatuagem Biomechanical">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Biomechanical</h3>
-          <p>Fusão de corpo e máquina com detalhes mecânicos impressionantes.</p>
-          <div class="card-meta">
-            <span>📍 Braço</span>
-            <span>⏱️ 9h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.41 (1).jpeg" alt="Tatuagem Surreal">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Surreal</h3>
-          <p>Imagens oníricas e impossíveis que desafiam a realidade.</p>
-          <div class="card-meta">
-            <span>📍 Peito</span>
-            <span>⏱️ 7h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.41 (2).jpeg" alt="Tatuagem Neo-Traditional">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Neo-Traditional</h3>
-          <p>Estilo clássico reinventado com cores modernas e detalhes elaborados.</p>
-          <div class="card-meta">
-            <span>📍 Antebraço</span>
-            <span>⏱️ 6h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.41 (3).jpeg" alt="Tatuagem Watercolor">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Watercolor</h3>
-          <p>Técnica de aquarela com cores que se misturam naturalmente.</p>
-          <div class="card-meta">
-            <span>📍 Perna</span>
-            <span>⏱️ 5h de sessão</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="img/WhatsApp Image 2026-04-29 at 19.22.41 (4).jpeg" alt="Tatuagem Illustrative">
-          <div class="card-overlay">
-            <span>Ver detalhes →</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <h3>Illustrative</h3>
-          <p>Ilustrações detalhadas que contam histórias visuais completas.</p>
-          <div class="card-meta">
-            <span>📍 Costas</span>
-            <span>⏱️ 12h de sessão</span>
-          </div>
-        </div>
-      </div>
+    <div class="filtros">
+      <button class="filtro ativo" data-filtro="todos">Todos</button>
+      <button class="filtro" data-filtro="pb">Preto e cinza</button>
+      <button class="filtro" data-filtro="cor">Colorida</button>
     </div>
+
+    <div class="galeria" id="galeria"></div>
 
     <div class="ver-mais">
-      <a href="contato.html" class="btn btn-primary">Agende sua sessão →</a>
+      <a href="contato.html" class="btn btn-primary">Quero uma tatuagem assim →</a>
     </div>
   </div>
-</section>
+</main>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-logo">
-        <div class="logo">James <span>Tatto art</span></div>
-        <p>Tatuagens que contam histórias e marcam momentos especiais.</p>
+      <div>
+        <a href="index.html" class="logo">Studio <span>James</span></a>
+        <p>Tatuagem colorida e preto e cinza. Especialista em cobertura e reforma de tatuagens antigas.</p>
       </div>
-      <div class="footer-links">
+      <div>
         <h4>Navegação</h4>
         <a href="index.html">Início</a>
+        <a href="trabalhos.html">Trabalhos</a>
         <a href="sobre.html">Sobre</a>
-        <a href="produtos.html">Produtos</a>
+        <a href="produtos.html">Loja</a>
         <a href="contato.html">Contato</a>
       </div>
-      <div class="footer-social">
+      <div>
         <h4>Redes sociais</h4>
-        <div class="social-icons">
-          <a href="#">📷 Instagram</a>
-          <a href="#">💬 WhatsApp</a>
-        </div>
+        <a href="#" data-insta>📷 Instagram</a>
+        <a href="#" data-whats>💬 WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> James Tatto art — Todos os direitos reservados.</p>
+      <p>© <span id="year"></span> Studio James — Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>
+
+<a href="#" data-whats class="whats-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1-1.6-1.5-3.5-1.5-5.4 0-5.8 4.7-10.5 10.6-10.5s10.6 4.7 10.6 10.5S21.9 26.1 16 26.1zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>
+</a>
 
 <script src="script.js"></script>
 </body>
